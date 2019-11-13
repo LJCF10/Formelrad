@@ -1,5 +1,7 @@
 package application;
 
+import java.lang.Math;
+
 /**
  * Berechnet das Formelrad
  * @author Peter Rutschmann
@@ -62,6 +64,9 @@ public class Calculator {
 		if(getSpannung() == 0 && getWiderstand() == 0 && getLeistung() != 0 && getStrom() != 0) {
 			LeistungDurchStromstaerke();
 		}
+		if(getStrom() == 0 && getSpannung() == 0 && getWiderstand() != 0 && getLeistung() != 0) {
+			SpannungDrei();
+		}
 	}
 	
 	/* Hier die Methoden mit den Formlen hinzufügen
@@ -91,6 +96,12 @@ public class Calculator {
 	
 	public double LeistungDurchStromstaerke() {
 		double resultat = getLeistung() / getStrom();
+		return resultat;
+	}
+	
+	public double SpannungDrei() {
+		double zwischenresultat = getLeistung() * getWiderstand();
+		double resultat = Math.sqrt(zwischenresultat);
 		return resultat;
 	}
 	
