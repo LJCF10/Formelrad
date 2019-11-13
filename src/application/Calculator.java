@@ -47,9 +47,19 @@ public class Calculator {
 		/* Hier auf Grund der vorhanden Werte entscheiden
 		 * welche Methode unten aufgerufen werden muss.
 		 */
+		if(getLeistung() == 0 && getWiderstand() != 0 && getStrom() != 0) {
+			WiderstandMalStromstärkeHochZwei();
+		}
 	}
 	
 	/* Hier die Methoden mit den Formlen hinzufügen
 	 */
+	
+	public double WiderstandMalStromstärkeHochZwei() {
+		double zwischenresultat = getStrom() * getStrom();
+		double resultat = getWiderstand() * zwischenresultat;
+		return resultat;
+		
+	}
 	
 }
