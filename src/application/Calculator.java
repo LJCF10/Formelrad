@@ -73,9 +73,14 @@ public class Calculator {
 		return resultat;
 	}
 	
+<<<<<<< HEAD
 	public double LeistungDrei() {
 		double zwischenresultat = getSpannung() * getSpannung();
 		double resultat = zwischenresultat / getWiderstand();
+=======
+	public double WiderstandMalStromstaerke() {
+		double resultat = getWiderstand() * getStrom();
+>>>>>>> IntegrateBaseProject
 		return resultat;
 	}
 	
