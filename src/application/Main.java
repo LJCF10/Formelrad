@@ -102,6 +102,8 @@ public class Main extends Application {
 				txStrom.setText(Double.toString(myCalculator.getStrom()));
 				txWiderstand.setText(Double.toString(myCalculator.getWiderstand()));
 				txLeistung.setText(Double.toString(myCalculator.WiderstandMalStromstaerkeHochZwei()));
+				txLeistung.setText(Double.toString(myCalculator.SpannungMalStromstaerke()));
+			
 			});
 
 			Scene scene = new Scene(root, 330, 490);
