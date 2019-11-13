@@ -69,4 +69,9 @@ public class Calculator {
 		return resultat;
 	}
 	
+	public double WiderstandMalStromstaerke() {
+		double resultat = getWiderstand() * getStrom();
+		return resultat;
+	}
+	
 }
