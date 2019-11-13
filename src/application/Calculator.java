@@ -53,6 +53,10 @@ public class Calculator {
 		if(getLeistung() == 0 && getWiderstand() == 0 && getStrom() != 0 && getSpannung() != 0) {
 			SpannungMalStromstaerke();
 		}
+		if(getLeistung() == 0 && getStrom() == 0 && getSpannung() != 0 && getWiderstand() != 0) {
+			LeistungDrei();
+		}
+		
 	}
 	
 	/* Hier die Methoden mit den Formlen hinzufügen
@@ -66,6 +70,12 @@ public class Calculator {
 	
 	public double SpannungMalStromstaerke() {
 		double resultat = getSpannung() * getStrom();
+		return resultat;
+	}
+	
+	public double LeistungDrei() {
+		double zwischenresultat = getSpannung() * getSpannung();
+		double resultat = zwischenresultat / getWiderstand();
 		return resultat;
 	}
 	
