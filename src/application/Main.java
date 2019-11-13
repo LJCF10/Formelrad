@@ -103,9 +103,13 @@ public class Main extends Application {
 				txWiderstand.setText(Double.toString(myCalculator.getWiderstand()));
 				txLeistung.setText(Double.toString(myCalculator.WiderstandMalStromstaerkeHochZwei()));
 				txLeistung.setText(Double.toString(myCalculator.SpannungMalStromstaerke()));
+<<<<<<< HEAD
+				txLeistung.setText(Double.toString(myCalculator.LeistungDrei()));
+=======
 				txSpannung.setText(Double.toString(myCalculator.WiderstandMalStromstaerke()));
 				
 				
+>>>>>>> IntegrateBaseProject
 				
 				
 				

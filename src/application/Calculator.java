@@ -53,6 +53,10 @@ public class Calculator {
 		if(getLeistung() == 0 && getWiderstand() == 0 && getStrom() != 0 && getSpannung() != 0) {
 			SpannungMalStromstaerke();
 		}
+		if(getLeistung() == 0 && getStrom() == 0 && getSpannung() != 0 && getWiderstand() != 0) {
+			LeistungDrei();
+		}
+		
 	}
 	
 	/* Hier die Methoden mit den Formlen hinzufügen
@@ -69,8 +73,14 @@ public class Calculator {
 		return resultat;
 	}
 	
+<<<<<<< HEAD
+	public double LeistungDrei() {
+		double zwischenresultat = getSpannung() * getSpannung();
+		double resultat = zwischenresultat / getWiderstand();
+=======
 	public double WiderstandMalStromstaerke() {
 		double resultat = getWiderstand() * getStrom();
+>>>>>>> IntegrateBaseProject
 		return resultat;
 	}
 	
