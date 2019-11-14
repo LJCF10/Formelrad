@@ -51,20 +51,29 @@ public class Calculator {
 		if(getStrom() == 0 && getLeistung() != 0 && getWiderstand() != 0 ){
 			
 			StromausLeistungundWiderstand();
-		}	
+		}
+		
+		if(getStrom() == 0 && getLeistung() != 0 && getWiderstand() != 0 ){
+			
+			StromausLeistungundWiderstand();
+		}
 		
 		
 	}
 	
 	public double StromausLeistungundWiderstand(){
 		
-		double zwischenres = getLeistung() / getWiderstand();
+		double zwischenres = getLeistung() / getSpannung();
 		double res = Math.sqrt(zwischenres);
 		
-		return res;
+		return res;		
+	}
+	
+	public double StromausLeistungundSpannung(){
 		
+		double res = getLeistung() / getSpannung();
 		
-		
+		return res;		
 	}
 	
 }
