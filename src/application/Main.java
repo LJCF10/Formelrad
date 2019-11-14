@@ -96,17 +96,24 @@ public class Main extends Application {
 				}
 				Calculator myCalculator = new Calculator(
 						power, tension, current, resistence);
-					
-				txLeistung.setText(Double.toString(myCalculator.getLeistung()));
-				txSpannung.setText(Double.toString(myCalculator.getSpannung()));
-				
-				
+									
+				//Lenny
 				txStrom.setText(Double.toString(myCalculator.StromausLeistungundWiderstand()));
 				txStrom.setText(Double.toString(myCalculator.StromausLeistungundSpannung()));
 				txStrom.setText(Double.toString(myCalculator.StromausSpannungundWiderstand()));
 				
 				
+				//Ali
 				txWiderstand.setText(Double.toString(myCalculator.getWiderstand()));
+				txLeistung.setText(Double.toString(myCalculator.WiderstandMalStromstaerkeHochZwei()));
+				txLeistung.setText(Double.toString(myCalculator.SpannungMalStromstaerke()));
+				txLeistung.setText(Double.toString(myCalculator.LeistungDrei()));
+				txSpannung.setText(Double.toString(myCalculator.WiderstandMalStromstaerke()));
+				txSpannung.setText(Double.toString(myCalculator.LeistungDurchStromstaerke()));
+				txSpannung.setText(Double.toString(myCalculator.SpannungDrei()));
+				
+				
+				
 			});
 
 			Scene scene = new Scene(root, 330, 490);
