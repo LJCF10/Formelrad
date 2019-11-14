@@ -99,7 +99,9 @@ public class Main extends Application {
 					
 				txLeistung.setText(Double.toString(myCalculator.getLeistung()));
 				txSpannung.setText(Double.toString(myCalculator.getSpannung()));
-				txStrom.setText(Double.toString(myCalculator.getStrom()));
+				
+				
+				txStrom.setText(Double.toString(myCalculator.StromausLeistungundWiderstand()));
 				txWiderstand.setText(Double.toString(myCalculator.getWiderstand()));
 			});
 

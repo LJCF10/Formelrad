@@ -13,10 +13,10 @@ public class Calculator {
 	
 	public Calculator(double leistung, double spannung, double strom, double widerstand) {
 		super();
-		this.leistung = leistung;
-		this.spannung = spannung;
-		this.strom = strom;
-		this.widerstand = widerstand;
+		this.leistung = leistung; //watt
+		this.spannung = spannung; //volt
+		this.strom = strom; //ampere
+		this.widerstand = widerstand; //ohm
 	}
 	
 	public double getLeistung() {
@@ -47,9 +47,24 @@ public class Calculator {
 		/* Hier auf Grund der vorhanden Werte entscheiden
 		 * welche Methode unten aufgerufen werden muss.
 		 */
+		
+		if(getStrom() == 0 && getLeistung() != 0 && getWiderstand() != 0 ){
+			
+			StromausLeistungundWiderstand();
+		}	
+		
+		
 	}
 	
-	/* Hier die Methoden mit den Formlen hinzufügen
-	 */
+	public double StromausLeistungundWiderstand(){
+		
+		double zwischenres = getLeistung() / getWiderstand();
+		double res = Math.sqrt(zwischenres);
+		
+		return res;
+		
+		
+		
+	}
 	
 }
